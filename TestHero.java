@@ -7,6 +7,6 @@ public class TestHero {
         System.out.println(mav);
         System.out.println(mav.equals(mav1));
         mav.attack(james);
-        System.out.println(james);
+        System.out.println(mav);
     }
 }

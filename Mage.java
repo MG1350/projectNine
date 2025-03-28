@@ -20,7 +20,7 @@ public class Mage extends Hero {
     }
     public String toString()
     {
-        return "A " + super.getType() + " named " + super.getName() + " with " + super.getHealth() + " health and " + spells + " spells.";
+        return super.toString() + " and " + spells + " spells";
     }
     public boolean equals(Mage n)
     {

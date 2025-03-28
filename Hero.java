@@ -45,7 +45,7 @@ public class Hero {
     }
     public String toString()
     {
-        return "A " + type + " named " + name + " with " + health + " health.";
+        return "A " + type + " named " + name + " with " + health + " health";
     }
     public boolean equals(Hero n)
     {
