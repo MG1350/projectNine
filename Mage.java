@@ -2,7 +2,7 @@ public class Mage extends Hero {
     private int spells;
     public Mage()
     {
-        super(5, "Mage", "Mav");
+        super(5, "Mage", "Mage");
         spells = 5;
     }
     public Mage(int c, String n, int s)
@@ -26,6 +26,18 @@ public class Mage extends Hero {
     {
         return super.equals(n) && spells == n.getSpells();
     }
+    // Two Unique Methods
+    public void recharge() 
+    {
+        spells += 2;
+        System.out.println(super.getName() + " recharged spells. Now has " + spells + " spells.");
+    }
+    public void heal() 
+    {
+        super.setHealth(super.getHealth() + 2);
+        System.out.println(super.getName() + " healed and now has " + super.getHealth() + " health.");
+    }
+    // Overriden Method
     public void attack(Hero n)
     {
         if(super.checkHealth() && spells > 0)

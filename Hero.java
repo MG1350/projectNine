@@ -7,7 +7,7 @@ public class Hero {
     {
         health = 5;
         type = "knight";
-        name = "Mav";
+        name = "Hero";
     }
     public Hero(int c, String t, String n)
     {
