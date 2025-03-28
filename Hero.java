@@ -39,15 +39,29 @@ public class Hero {
     {
         name = t;
     }
-    @Override
+    public boolean checkHealth()
+    {
+        return health > 0;
+    }
     public String toString()
     {
         return "A " + type + " named " + name + " with " + health + " health.";
+    }
+    public boolean equals(Hero n)
+    {
+        return health == n.getHealth() && type == n.getType() && name == n.getName();
     }
     public void attack(Hero n)
     {
         System.out.println(name + " attacks and does 1 damage.");
         n.setHealth(n.getHealth()-1);
-        System.out.println(n.getName() + " now has " + n.getHealth() + " health.");
+        if(n.checkHealth())
+        {
+            System.out.println(n.getName() + " now has " + n.getHealth() + " health.");
+        }
+        else
+        {
+            System.out.println(name + " has downed " + n.getName());
+        }
     }
 }
