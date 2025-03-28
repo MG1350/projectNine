@@ -22,6 +22,10 @@ public class Mage extends Hero {
     {
         return "A " + super.getType() + " named " + super.getName() + " with " + super.getHealth() + " health and " + spells + " spells.";
     }
+    public boolean equals(Mage n)
+    {
+        return super.equals(n) && spells == n.getSpells();
+    }
     public void attack(Hero n)
     {
         if(super.checkHealth() && spells > 0)
